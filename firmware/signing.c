@@ -690,7 +690,7 @@ static bool signing_check_fee(void) {
   uint64_t fee = 0;
   // set a static KMD fee and bypass output>input check due to reward TX
   // which are all output_value_sum > input_value_sum
-  if (strcmp(coin->coin_shortcut,"KMD") == 0) fee = 1000; //static KMD fee = 1000 sat
+  if (strcmp(coin->coin_shortcut,"KMD") == 0) fee = 5000; //static KMD fee = 5000 sat
   else {
     if (spending > to_spend) {
       fsm_sendFailure(FailureType_Failure_NotEnoughFunds, _("Not enough funds"));
